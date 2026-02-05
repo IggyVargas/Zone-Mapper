@@ -121,6 +121,9 @@ export class DeviceDiscoveryService {
             '_target_\\d+_[a-z]+$',
             '_target_\\d+.*$',
             '_target_count$',
+            '_t[123]_x_mm$',
+            '_t[123]_y_mm$',
+            '_t[123]_speed$',
             // Settings entity suffixes (EPL)
             '_max_distance$',
             '_occupancy_off_delay$',
@@ -221,10 +224,8 @@ export class DeviceDiscoveryService {
         firmwareVersion: d.sw_version as string | undefined,
         areaId: d.area_id as string | undefined,
       }))
-      .filter((d) => {
-        const manufacturer = normalizeManufacturer(d.manufacturer).toLowerCase();
-        return this.manufacturerFilters.some(filter => manufacturer === filter.toLowerCase());
-      });
+      .filter((d) => true);
+
 
     // Enrich with entity name prefix and area name
     const enrichedDevices = await Promise.all(
