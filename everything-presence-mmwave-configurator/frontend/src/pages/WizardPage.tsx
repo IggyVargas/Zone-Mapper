@@ -1443,7 +1443,6 @@ export const WizardPage: React.FC<WizardPageProps> = ({
               zoom={canvasZoom}
               panOffsetMm={canvasPan}
               onPanChange={setCanvasPan}
-              onDragStateChange={setIsCanvasDragging}
               displayUnits={units}
             />
           )}
@@ -2670,7 +2669,6 @@ export const WizardPage: React.FC<WizardPageProps> = ({
               zoom={canvasZoom}
               panOffsetMm={canvasPan}
               onPanChange={setCanvasPan}
-              onDragStateChange={setIsCanvasDragging}
               displayUnits={units}
             />
 
