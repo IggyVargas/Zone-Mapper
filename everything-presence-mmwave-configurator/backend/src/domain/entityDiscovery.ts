@@ -1,6 +1,3 @@
-x: `sensor.\${name}_t${targetNum}_x_mm`,
-y: `sensor.\${name}_t${targetNum}_y_mm`,
-speed: `sensor.\${name}_t${targetNum}_speed`,
 import type { IHaReadTransport } from '../ha/readTransport';
 import type { EntityRegistryEntry } from '../ha/types';
 import type { DeviceRegistryEntry } from '../ha/readTransport';
