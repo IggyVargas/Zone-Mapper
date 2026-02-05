@@ -1,3 +1,6 @@
+x: `sensor.\${name}_t${targetNum}_x_mm`,
+y: `sensor.\${name}_t${targetNum}_y_mm`,
+speed: `sensor.\${name}_t${targetNum}_speed`,
 import type { IHaReadTransport } from '../ha/readTransport';
 import type { EntityRegistryEntry } from '../ha/types';
 import type { DeviceRegistryEntry } from '../ha/readTransport';
@@ -522,9 +525,9 @@ export class EntityDiscoveryService {
 
     // Define expected patterns for tracking targets
     const patterns: Record<keyof TargetEntitySet, string> = {
-      x: `sensor.\${name}_target_${targetNum}_x`,
-      y: `sensor.\${name}_target_${targetNum}_y`,
-      speed: `sensor.\${name}_target_${targetNum}_speed`,
+      x: `sensor.\${name}_t${targetNum}_x_mm`,
+      y: `sensor.\${name}_t${targetNum}_y_mm`,
+      speed: `sensor.\${name}_t${targetNum}_speed`,
       resolution: `sensor.\${name}_target_${targetNum}_resolution`,
       angle: `sensor.\${name}_target_${targetNum}_angle`,
       distance: `sensor.\${name}_target_${targetNum}_distance`,
